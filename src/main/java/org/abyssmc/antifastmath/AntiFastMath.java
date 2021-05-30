@@ -87,7 +87,7 @@ public final class AntiFastMath extends JavaPlugin implements Listener {
         double vanillaRunning = vanillaPrecision.get(event.getPlayer());
         double optifineRunning = fastMathPrecision.get(event.getPlayer());
 
-        if (lowVanilla < 1e-5 || lowOptifine < 1e-5) {
+        if (lowVanilla < 1e-5 || lowOptifine < 1e-5 && movement.length() > 0.1) {
             vanillaRunning = vanillaRunning * 15 / 16 + lowVanilla;
             optifineRunning = optifineRunning * 15 / 16 + lowOptifine;
 
